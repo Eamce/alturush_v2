@@ -339,7 +339,6 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
                               },
                             );
                           } else if (subTotalStore.contains(false)) {
-
                             CoolAlert.show(
                               context: context,
                               type: CoolAlertType.error,
@@ -368,7 +367,6 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
                             );
                           } else {
                             setState(() {
-
                               for (int i=0;i<side.length;i++){
                                 side[i] = false;
                                 for(int j=0;j<side1.length;j++){
@@ -376,7 +374,6 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
                                 }
                               }
                             });
-
                             Navigator.pop(context);
                             Navigator.of(context).push(_placeOrderDelivery(
                               stores,
@@ -406,7 +403,6 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-
                     ///GC Pick-up
                     GestureDetector(
                       onTap: () async {
@@ -418,7 +414,6 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
                         } else {
                           print(subTotalStore);
                           if (subTotalStore.contains(false)) {
-
                             CoolAlert.show(
                               context: context,
                               type: CoolAlertType.error,

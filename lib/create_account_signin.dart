@@ -1,4 +1,3 @@
-
 import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +14,7 @@ import 'showDpn.dart';
 import 'dart:async';
 import 'account_lock/accountLock.dart';
 import 'account_lock/enterUsername.dart';
+import 'package:encrypt/encrypt.dart';
 
 //import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 //import 'package:firebase_auth/firebase_auth.dart';
@@ -1033,7 +1033,6 @@ class _CreateAccountSignIn extends State<CreateAccountSignIn>
             if (remainingSeconds != 0){
               resetTimer();
             }
-
             startTimer();
           });
 
@@ -1707,6 +1706,7 @@ class _CreateAccountSignIn extends State<CreateAccountSignIn>
                         {
                           print('wrong attemp ni');
                           print(wrongAttempt);
+
                           if (_formKey.currentState.validate()) {
                             userName = _usernameLogIn.text;
                             getUserDetails(_usernameLogIn.text);

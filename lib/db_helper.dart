@@ -95,6 +95,7 @@ class RapidA {
   }
 
   Future checkLogin(_usernameLogIn,_passwordLogIn) async{
+    print('ENC PASS : ${encrypt(_passwordLogIn)}');
     var client = http.Client();
     final response = await client.post(Uri.parse("$server/checkLogin_r"),body:{
       '_usernameLogIn' : encrypt(_usernameLogIn),
