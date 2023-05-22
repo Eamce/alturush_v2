@@ -470,7 +470,6 @@ class _GcPickUp extends State<GcPickUp> {
                                 ],
                               ),
                             ),
-
                             Container(
                               height: 40,
                               color: Colors.green[100],
@@ -556,7 +555,6 @@ class _GcPickUp extends State<GcPickUp> {
                                                     //     ),
                                                     //   ),
                                                     // ),
-
                                                     Padding(
                                                       padding: EdgeInsets.fromLTRB(5, 5, 10, 0),
                                                       child: Text("₱ ${loadCartData[index0]['price_price'].toString()}",
@@ -566,7 +564,6 @@ class _GcPickUp extends State<GcPickUp> {
                                                   ],
                                                 ),
                                               ),
-
                                               Expanded(
                                                 child: Column(
                                                   children: <Widget>[
@@ -586,7 +583,6 @@ class _GcPickUp extends State<GcPickUp> {
                                                             ),
                                                           ),
                                                         ),
-
                                                         Padding(
                                                           padding: EdgeInsets.fromLTRB(0, 2, 15, 0),
                                                           child: Text("₱ ${loadCartData[index0]['total_price']}",
@@ -595,7 +591,6 @@ class _GcPickUp extends State<GcPickUp> {
                                                         )
                                                       ],
                                                     ),
-
                                                     Row(
                                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: <Widget>[
@@ -607,7 +602,6 @@ class _GcPickUp extends State<GcPickUp> {
                                                             ),
                                                           ),
                                                         ),
-
                                                         Padding(
                                                           padding: EdgeInsets.only(right: 10, top: 5),
                                                           child: Container(
@@ -654,10 +648,8 @@ class _GcPickUp extends State<GcPickUp> {
                                                                 setState(() {
                                                                   selectedValue = value;
                                                                   stock = _option.indexOf(value);
-
                                                                   print(loadCartData[index0]['cart_id']);
                                                                   print(stock);
-
                                                                   updateCartIcoos(loadCartData[index0]['cart_id'], stock);
                                                                 });
                                                               },
@@ -680,9 +672,7 @@ class _GcPickUp extends State<GcPickUp> {
                                 );
                               }
                             ),
-
                             Divider(thickness: 2, color: Colors.grey[200]),
-
                             Padding(
                               padding: EdgeInsets.symmetric(vertical: 10),
                               child: Row(
@@ -707,9 +697,7 @@ class _GcPickUp extends State<GcPickUp> {
                                 ],
                               ),
                             ),
-
                             Divider(thickness: 2, color: Colors.grey[200]),
-
                             Padding(
                               padding: EdgeInsets.fromLTRB(10, 0, 5, 5),
                               child: new Text("Setup Date & Time for Pick-up",

@@ -263,7 +263,6 @@ class _SubmitOrder extends State<SubmitOrder> with TickerProviderStateMixin {
     var res = await db.loadCartData2(widget.productID);
     if (!mounted) return;
     setState(() {
-
       loadCartData = res['user_details'];
       items = loadCartData.length;
       isLoading = false;

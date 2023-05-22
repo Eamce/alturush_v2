@@ -1574,7 +1574,6 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
                   padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                   child: Row(
                     children: <Widget>[
-
                       Container(
                         width: MediaQuery.of(context).size.width / 5.5,
                         child: SleekButton(
@@ -1603,9 +1602,7 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
                           ),
                         ),
                       ),
-
                       SizedBox(width: 10.0,),
-
                       Flexible(
                         child: SleekButton(
                           onTap: () async {
