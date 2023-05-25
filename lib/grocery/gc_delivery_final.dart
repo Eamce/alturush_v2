@@ -30,9 +30,20 @@ class GcDeliveryFinal extends StatefulWidget {
   final townID;
   final conFee;
   final deliveryFee;
+  final deliveryDateData;
+  final  groupValue;
+  final deliveryTimeData;
+  final budata;
+  final pickUpOrDelivery;
 
-  GcDeliveryFinal({Key key, @required
+
+      GcDeliveryFinal({Key key, @required
+      this.pickUpOrDelivery,
+      this.groupValue,
     this.stores,
+    this.deliveryDateData,
+        this.deliveryTimeData,
+        this.budata,
     this.items,
     this.subTotal,
     this.grandTotal,
@@ -63,7 +74,6 @@ class _GcDeliveryFinal extends State<GcDeliveryFinal> with TickerProviderStateMi
   List loadCartData;
   List loadIdList;
   List getDeliveryFee = [];
-
   List<String> billPerBu = [];
 
   var isLoading = true;
@@ -535,22 +545,18 @@ class _GcDeliveryFinal extends State<GcDeliveryFinal> with TickerProviderStateMi
   }
 
   _placeOrder() async {
-    // SharedPreferences prefs = await SharedPreferences.getInstance();
-    // prefs.setString('street', widget.street);
-    // prefs.setString('houseNo', widget.houseNo);
-    // prefs.setString('houseNo', widget.houseNo);
-    // prefs.setString('placeRemark', widget.placeRemark);
-
-    // await db.placeOrder2(
-    //     widget.deliveryDateData,
-    //     widget.deliveryTimeData,
-    //     widget.getTenantData,
-    //     widget.specialInstruction,
-    //     deliveryCharge,
-    //     oCcy.parse(amountTender.text),
-    //     widget.productID
-    // );
-    // print(widget.specialInstruction);
+    await db.submitOrder(
+        widget.groupValue,
+        widget.deliveryDateData,
+        widget.deliveryTimeData,
+        widget.budata,
+        grandTotal,
+        widget.conFee,
+        placeRemarks,
+     //   widget.placeRemarksData,
+        widget.pickUpOrDelivery,
+        widget.priceGroup,
+    );
   }
 
 

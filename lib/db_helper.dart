@@ -22,6 +22,7 @@ class RapidA {
 
   // String server = "https://app1.alturush.com/";
   String server = "http://172.16.43.147/rapida";
+  // String server = "http://192.168.100.41/rapida";
   // String server = "http://10.233.1.58/rapida/";
   // String server = "http://172.16.46.130/rapida";
   // String server = "http://192.168.1.2:3333/rapida";
@@ -1588,6 +1589,7 @@ class RapidA {
     var client = http.Client();
     SharedPreferences prefs = await SharedPreferences.getInstance();
     var userID = prefs.getString('s_customerId');
+
     await client.post(Uri.parse("$server/gc_submitOrder_r"),body:{
       'customerId'       : encrypt(userID),
       'groupValue'       : encrypt(groupValue.toString()),

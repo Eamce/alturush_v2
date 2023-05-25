@@ -1082,7 +1082,11 @@ class _GcDelivery extends State<GcDelivery> {
                             Navigator.of(context).push(_signIn()).then((val)=>{onRefresh()});
                           }else{
                             Navigator.of(context).push(_gcDeliveryFinal(
+                              groupValue,
                               widget.stores,
+                              deliveryDateData,
+                              deliveryTimeData,
+                              buData,
                               widget.items,
                               widget.subTotal,
                               widget.grandTotal,
@@ -1152,7 +1156,11 @@ Widget _myRadioButton({String title, int value, Function onChanged}) {
 }
 
 Route _gcDeliveryFinal(
+    groupValue,
     stores,
+    deliveryDateData,
+    deliveryTimeData,
+    budata,
     items,
     subTotal,
     grandTotal,
@@ -1163,7 +1171,12 @@ Route _gcDeliveryFinal(
     deliveryFee,){
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => GcDeliveryFinal(
+      pickUpOrDelivery  : '0',
+      groupValue : groupValue,
       stores      : stores,
+      deliveryDateData: deliveryDateData,
+      deliveryTimeData: deliveryTimeData,
+      budata : budata,
       items       : items,
       subTotal    : subTotal,
       grandTotal  : grandTotal,

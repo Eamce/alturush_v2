@@ -1673,35 +1673,35 @@ class _GcLoadCart extends State<GcLoadCart> with TickerProviderStateMixin {
   }
 }
 
-Route _pickUp(
-  stores,
-  items,
-  subTotal,
-  pickingFee,
-  grandTotal,
-  priceGroup
-    ) {
-  return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => GcPickUp(
-      stores      : stores,
-      items       : items,
-      subTotal    : subTotal,
-      pickingFee  : pickingFee,
-      grandTotal  : grandTotal,
-      priceGroup  : priceGroup,
-    ),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      var begin = Offset(1.0, 0.0);
-      var end = Offset.zero;
-      var curve = Curves.decelerate;
-      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-      return SlideTransition(
-        position: animation.drive(tween),
-        child: child,
-      );
-    },
-  );
-}
+// Route _pickUp(
+//   stores,
+//   items,
+//   subTotal,
+//   pickingFee,
+//   grandTotal,
+//   priceGroup
+//     ) {
+//   return PageRouteBuilder(
+//     pageBuilder: (context, animation, secondaryAnimation) => GcPickUp(
+//       stores      : stores,
+//       items       : items,
+//       subTotal    : subTotal,
+//       pickingFee  : pickingFee,
+//       grandTotal  : grandTotal,
+//       priceGroup  : priceGroup,
+//     ),
+//     transitionsBuilder: (context, animation, secondaryAnimation, child) {
+//       var begin = Offset(1.0, 0.0);
+//       var end = Offset.zero;
+//       var curve = Curves.decelerate;
+//       var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+//       return SlideTransition(
+//         position: animation.drive(tween),
+//         child: child,
+//       );
+//     },
+//   );
+// }
 
 Route _placeOrderDelivery(
     stores,

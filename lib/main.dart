@@ -50,7 +50,7 @@ class _MyApp extends State<MyApp>{
     }
   }
 
-  _logOutUser() async{
+  _logOutUser() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.clear();
   }
